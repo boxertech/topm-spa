@@ -4,7 +4,7 @@ angular.module('loadMeApp')
 		vm.counter = 1;
 
 		// create interval timer for 3 second loading
-		let stop = $interval(function () {
+		var stop = $interval(function () {
 			vm.counter++;
 			if (vm.counter > 3) {
 				vm.stopLoading();
