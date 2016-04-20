@@ -2,7 +2,12 @@ var gulp = require('gulp');
 var eslint = require('gulp-eslint');
 var browserSync = require('browser-sync').create();
 var files = {
-	loadme: ["loadme/**/*.js"]
+	js: {
+		loadme: ["loadme/**/*.js"]
+	},
+	hmtl: {
+		loadme: ["loadme/**/*.html"]
+	}
 };
 
 //Server
@@ -14,7 +19,8 @@ gulp.task('serve-loadme', function () {
 		}
 	});
 
-	gulp.watch("loadme/**/*.js", js_watch(files.loadme), browserSync.reload);
+	gulp.watch("loadme/**/*.js", js_watch(files.js.loadme), browserSync.reload);
+	gulp.watch("loadme/**/*.html", browserSync.reload);
 });
 
 gulp.task('lint', function () {
