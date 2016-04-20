@@ -1,0 +1,21 @@
+{
+  "name": "topm-spa",
+  "version": "0.0.1",
+  "description": "Mini SPA apps for Top of Mind Networks",
+  "main": "index.js",
+  "scripts": {
+    "loadme": "gulp serve-loadme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "topm-spa"
+  },
+  "author": "Ken Wilkinson",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1"
+  }
+}
