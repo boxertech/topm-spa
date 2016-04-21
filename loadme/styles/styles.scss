@@ -1,0 +1,57 @@
+/**
+** COLORS
+**/
+$color-label: #666;
+$frame-border: #ccc;
+
+.simple-form {
+	margin: 20px;
+	border: 1px solid $frame-border;
+	border-radius: 4px;
+	padding: 10px;
+	max-width: 600px;
+}
+.form-group label {
+	color: $color-label;
+
+}
+
+.loader {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+.loader--img {
+	width: 100%;
+	max-width: 250px;
+	margin: 100px auto;
+}
+.loader--text {
+	width: 100%;
+	max-width: 60px;
+	margin: 0 auto;
+	font-family: "Helvetica, Arial, sans-serif";
+	animation-duration: 0.7s;
+	animation-delay: 0.2s;
+	animation-name: counter-up;
+	animation-iteration-count: 3;
+}
+
+@keyframes counter-up {
+	from {
+		font-size: 30px;
+		margin-top: 200px;
+	}
+	to {
+		font-size: 120px;
+		margin-top: 150px;
+	}
+}
+circle {
+	stroke: blue;
+	stroke-width: 3px;
+	fill: steelblue;
+	opacity: .2;
+}

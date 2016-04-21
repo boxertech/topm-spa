@@ -61,4 +61,20 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 
 
 ### code linting (and reload) [REQ-0.2]
-- created topm-spa directory
+- install gulp-eslint and create .eslintrc to configure for ES6
+- create linting task in gulpfile.js
+- refactor serve task to include watches, linting and browser-sync reload
+- **[REQ-0.2 complete]**
+
+### loading animation [REQ-1.2]
+- download animated svg and embed in loading.hmtl
+- define positioning and animation in css
+- **[REQ-1.2 complete]**
+
+### name and email form [REQ-1.3]
+- add name and email form controls to partials/loaded.html
+- add submit button to form
+- install gulp-sass and bootstrap for styling assistance
+- create gulp tasks for sass and watches
+- map bootstrap classes and add some custom styling for effective presentation.
+- **[REQ-1.3 complete]**

@@ -10,6 +10,7 @@ angular.module("loadMeApp", ['ui.router'])
 			})
 			.state("loading", {
 				url: "/",
-				templateUrl: "partials/loading.html"
+				templateUrl: "partials/loading.html",
+				controller: "loadingController"
 			});
 	});
