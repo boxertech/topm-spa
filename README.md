@@ -78,3 +78,15 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - create gulp tasks for sass and watches
 - map bootstrap classes and add some custom styling for effective presentation.
 - **[REQ-1.3 complete]**
+
+### Also add a 2 option checkbox field labeled as "Contact via" with options "email,text" [REQ-1.4]
+- add checkbox group to loaded.html
+- **[REQ-1.4 complete]**
+
+### somewhere in the same view display a live binded model of the form in angular fashion [REQ-1.5]
+- added bootstrap grid to provide page structure
+- added disalbled form controls on right side (or bottom, depending on responsive layout) to echo valid entered values.
+- added loadedController to maintain modularity
+- **[REQ-1.5 complete]**
+
+### When the form is submitted, transition to a nice Thank you view that shows the data submitted [REQ-1.6]

@@ -6,7 +6,9 @@ angular.module("loadMeApp", ['ui.router'])
 		$stateProvider
 			.state("loaded", {
 				url: "/loaded",
-				templateUrl: "partials/loaded.html"
+				templateUrl: "partials/loaded.html",
+				controller: "loadedController",
+				controllerAs: 'loaded'
 			})
 			.state("loading", {
 				url: "/",
