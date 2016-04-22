@@ -7,6 +7,7 @@ angular.module("directMeApp", ['ui.router'])
 			.state("home", {
 				url: "/",
 				templateUrl: "partials/directMe.html",
-				controller: "directMeController"
+				controller: "directMeController",
+				controllerAs: "ctrl"
 			})
 	});
