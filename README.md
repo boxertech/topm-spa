@@ -102,3 +102,8 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 1. Create protractor run tasks that execute successfully for Chrome as the target browser.
 2. Create as many e2e tests as you can for the LoadMe app.
 
+
+## TODO:
+- ES6ify
+- documentation
+- architecture notes
