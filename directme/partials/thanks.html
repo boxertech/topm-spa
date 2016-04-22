@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-sm-12">
+		<fieldset disabled>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" readonly id="name_RO" placeholder=" Enter your name..." ng-model="::thanks.contact.name">
+			</div>
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" class="form-control" id="emailaddr_RO" placeholder="and your email address" ng-model="thanks.contact.email">
+			</div>
+			<div class="form-group">
+				<label>Contact via:</label>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="thanks.contact.viaEmail">
+						Email
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="thanks.contact.viaText">
+						Text
+					</label>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>

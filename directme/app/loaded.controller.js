@@ -1,4 +1,4 @@
-angular.module('loadMeApp')
+angular.module('directMeApp')
 	.controller("loadedController", ["$scope", "loadMeService", "$state",
 		function ($scope, loadMeService, $state) {
 		let vm = this;

@@ -6,7 +6,7 @@ You will be creating 3 mini spa apps that demonstrate senior level angular requi
 Use angular 1.5.5 (latest stable release at the time of this writing). Use only npm dependencies, no bower. We don't like bower anymore. Document your reasons for using any dependencies.
 Also document your thought process, notes, google searches, etc, as much as possible. Build each angular app in a modular fashion (no 10k line single app.js, unless it's a production bundle!). We prefer ES6 but es5 is fine. [REQ-0.2] Code linting is encouraged as part of the build process but not required.
 
-[REQ-1] First Mini App: LoadMe
+## [REQ-1] First Mini App: LoadMe
 ==============================
 Create a simple crud angular app with simulated splash loading delay.
 
@@ -17,22 +17,6 @@ Create a simple crud angular app with simulated splash loading delay.
 5. [REQ-1.5] somewhere in the same view display a live binded model of the form in angular fashion.
 6. [REQ-1.6] When the form is submitted, transition to a nice Thank you view that shows the data submitted.
 
-Second Mini App: DirectMe
-==============================
-Create a simple app that takes an address input and displays google map.
-
-1. Create a parent/child angular directive for the address input and display of google map. Child being the google map display and parent being the required input map.
-2. Create another directive that stores address inputs into localstorage to be retrievable in a "history list" in the ui somewhere.
-
-Third Mini App: TestMe
-==============================
-Reusing the "LoadMe" mini app, create e2e tests using protractor.
-
-1. Create protractor run tasks that execute successfully for Chrome as the target browser.
-2. Create as many e2e tests as you can for the LoadMe app.
-
-## development
-
 ### initial set-up [REQ-0.1]
 - created topm-spa directory
 - run git init to create git repo
@@ -42,7 +26,7 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - create test index.html
 - run gulp serve-loadme, see contents of index.html in browser
 - added loadme script tp package.json
-- **[REQ-0.1 complete]**
+- **[REQ-0.1] complete**
 
 ### loadme set-up [REQ-1.1]
 - update gulp serve-me task to used 'loadme/'
@@ -57,19 +41,19 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - At this point, I spent more time than I would have liked to get the browserSync config to work.  I had trouble serving the  node_modules. Like many configuration issues, there was little feedback when broken, and the solution was simple once identified.
 - inject $interval (googled syntax) to loadMeController to create 3 second timer (1 sec. interval), and display the counter on hte loading page.
 - inject $state, added $state.go('loaded') to interval stop function.
-- **[REQ-1.1 complete]**
+- **[REQ-1.1] complete**
 
 
 ### code linting (and reload) [REQ-0.2]
 - install gulp-eslint and create .eslintrc to configure for ES6
 - create linting task in gulpfile.js
 - refactor serve task to include watches, linting and browser-sync reload
-- **[REQ-0.2 complete]**
+- **[REQ-0.2] complete**
 
 ### loading animation [REQ-1.2]
 - download animated svg and embed in loading.hmtl
 - define positioning and animation in css
-- **[REQ-1.2 complete]**
+- **[REQ-1.2] complete**
 
 ### name and email form [REQ-1.3]
 - add name and email form controls to partials/loaded.html
@@ -77,16 +61,44 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - install gulp-sass and bootstrap for styling assistance
 - create gulp tasks for sass and watches
 - map bootstrap classes and add some custom styling for effective presentation.
-- **[REQ-1.3 complete]**
+- **[REQ-1.3] complete**
 
 ### Also add a 2 option checkbox field labeled as "Contact via" with options "email,text" [REQ-1.4]
 - add checkbox group to loaded.html
-- **[REQ-1.4 complete]**
+- **[REQ-1.4] complete**
 
 ### somewhere in the same view display a live binded model of the form in angular fashion [REQ-1.5]
 - added bootstrap grid to provide page structure
 - added disalbled form controls on right side (or bottom, depending on responsive layout) to echo valid entered values.
 - added loadedController to maintain modularity
-- **[REQ-1.5 complete]**
+- **[REQ-1.5] complete**
 
 ### When the form is submitted, transition to a nice Thank you view that shows the data submitted [REQ-1.6]
+- create thanks route with thanks.html template and thanksController
+- create loadMeService to save and get contact information between controllers.
+- **[REQ-1.6] complete**
+
+**[REQ-1] minimum requirements complete**
+
+## [REQ-2] Second Mini App: DirectMe
+==============================
+Create a simple app that takes an address input and displays google map.
+
+1. [REQ-2.1] Create a parent/child angular directive for the address input and display of google map. Child being the google map display and parent being the required input map.
+2. [REQ-2.2] Create another directive that stores address inputs into localstorage to be retrievable in a "history list" in the ui somewhere.
+
+### directMe initial set-up [REQ-2.0]
+- set-up guplfile tasks for directMe
+- create directMe directory and app.js
+- **[REQ-2.0] complete**
+
+### Create a parent/child angular directive for the address input and display of google map. Child being the google map display and parent being the required input map. [REQ-2.1]
+
+
+## [REQ-3] Third Mini App: TestMe
+==============================
+Reusing the "LoadMe" mini app, create e2e tests using protractor.
+
+1. Create protractor run tasks that execute successfully for Chrome as the target browser.
+2. Create as many e2e tests as you can for the LoadMe app.
+
