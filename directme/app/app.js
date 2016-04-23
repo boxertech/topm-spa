@@ -1,4 +1,4 @@
-angular.module("directMeApp", ['ui.router'])
+angular.module("directMeApp", ['ui.router', 'uiGmapgoogle-maps'])
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/");
 

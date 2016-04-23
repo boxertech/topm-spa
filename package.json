@@ -21,6 +21,10 @@
     "gulp-sass": "^2.2.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "angular-google-maps": "^2.3.2",
+    "angular-simple-logger": "^0.1.7",
+    "bootstrap": "^3.3.6",
+    "google-maps-api": "^2.0.1",
+    "lodash": "^4.11.1"
   }
 }

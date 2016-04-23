@@ -93,6 +93,12 @@ Create a simple app that takes an address input and displays google map.
 - **[REQ-2.0] complete**
 
 ### Create a parent/child angular directive for the address input and display of google map. Child being the google map display and parent being the required input map. [REQ-2.1]
+- created directMe.html as a container for the director directive.
+- created director (parent) directive and template.  This contains an address form and the mapper (child) directive.
+- installed angular-google-maps and google-maps-api to create the map feature.
+- using Google Maps API site, and posting from [Sten Hougaard] (http://codepen.io/netsi1964/post/angularjs-google-maps-directive), I displayed a map inside our mapper.
+- Also had to install lodash and angular-simple-logger to resolve dependencies with angular-google-maps.
+- This provides 
 
 
 ## [REQ-3] Third Mini App: TestMe
