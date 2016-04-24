@@ -120,6 +120,11 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 1. Create protractor run tasks that execute successfully for Chrome as the target browser.
 2. Create as many e2e tests as you can for the LoadMe app.
 
+### [REQ-3.0] TestMe initial set-up
+- installed Protractor globally. Installing globally allows command line interface to work without additional steps.
+- update and start webdriver-manager
+- Java upgrade reqiured [rabbit holes :(]
+- create test folder and set-up protractor config.js.
 
 ## TODO:
 - ES6ify
