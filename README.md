@@ -124,9 +124,25 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - installed Protractor globally. Installing globally allows command line interface to work without additional steps.
 - update and start webdriver-manager
 - Java upgrade reqiured [rabbit holes :(]
+- **[REQ-3.0] complete**
+
+### [REQ-3.1] Create protractor run tasks that execute successfully for Chrome as the target browser.
 - create test folder and set-up protractor config.js.
+- set target browser as Chrome.
+- create npm script to run tests (npm run-script test-loadme). In a real-world scenario, these 3 tasks would likely either be separate applications of components of a single application, and custom script should not be needed.
+- **[REQ-3-1] completed**
+
+### [REQ-3.2] Create as many e2e tests as you can for the LoadMe app.
+- Create loading.spec.js.  Create test validating transition to loaded state.
+- Create loaded.spec.js.  Create test validating inputs and echo displays.
+- Create thanks.spec.js.  Create test validating transition from loaded state to thanks state. Create test validating display values.
+- **[REQ-3-2] completed**
 
 ## TODO:
 - ES6ify
 - documentation
 - architecture notes
+- test bad input
+- test remaining fields
+- **local storage**
+- 

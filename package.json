@@ -4,7 +4,8 @@
   "description": "Mini SPA apps for Top of Mind Networks",
   "main": "index.js",
   "scripts": {
-    "loadme": "gulp serve-loadme"
+    "loadme": "gulp serve-loadme",
+    "test-loadme": "protractor loadme/tests/conf.js"
   },
   "repository": {
     "type": "git",
