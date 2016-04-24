@@ -10,13 +10,26 @@ class Mapper {
 		// compile and link steps until the template is retrieved. This disrupts the compile down, link up execution
 		// order. Therefore, I am putting the template in the .js file here to assure the child directive link function
 		// executes before the parent link function.
-		this.template = "<div class=\"map-container\"><div>center={{mapperCtrl.map.center.latitude}},{{mapperCtrl.map.center.longitude}}, zoom={{mapperCtrl.map.zoom}}</div><ui-gmap-google-map center=\"mapperCtrl.map.center\" zoom=\"mapperCtrl.map.zoom\"></ui-gmap-google-map></div>"; //"../partials/mapper.html";
+		this.template = "<div class=\"map-container\"><ui-gmap-google-map center=\"mapperCtrl.map.center\" zoom=\"mapperCtrl.map.zoom\"></ui-gmap-google-map></div>"; //"../partials/mapper.html";
 		this.controllerAs = "mapperCtrl";
 	}
 
-	controller($scope) {
-		this.log = function (message) {
-			console.log("mapper.log: ", message);
+	controller(geoCodeService) {
+		this.geoCodeService = geoCodeService;
+		this.mapAddress = function (address) {
+			console.log("mapper.map: ", address, this);
+			this.geoCodeService.getGeoCode(address)
+				.then((results) => {
+					console.log("geocode results: ", results[0].geometry);
+					this.map.center = {
+						latitude: results[0].geometry.location.lat(),
+						longitude: results[0].geometry.location.lng()
+					};
+					this.map.zoom = 11;
+				})
+				.catch((status) => {
+					console.log("geocode failed: ", status);
+				});
 		};
 		this.map = {
 			center: {
@@ -25,17 +38,21 @@ class Mapper {
 			},
 			zoom: 6
 		};
-		// AIzaSyDrjyb-xCq7vMVMWX2ZjdI7JZYAQnEhuAs
+
+		var newCenter = {};
+
+		console.log("newCenter: ", newCenter, this);
 	}
 
 	link($scope, $elem, $attr, directorCtrl) {
-		console.log("mapper link");
-		directorCtrl.register($scope.mapperCtrl);
+		console.log("mapper link", this, $scope, directorCtrl);
+		directorCtrl.registerMapper($scope.mapperCtrl);
 	}
+
 
 }
 
 angular.module("directMeApp")
-	.directive("mapper", () => new Mapper());
+	.directive("mapper", ["geoCodeService", (geoCodeService) => new Mapper(geoCodeService)]);
 
 

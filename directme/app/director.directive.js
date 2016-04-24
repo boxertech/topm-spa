@@ -9,22 +9,35 @@ class Director {
 
 
 	controller($scope) {
-		this.register = function (mapCtrl) {
-			console.log("registering: ", mapCtrl);
+		this.registerMapper = function (mapCtrl) {
+			console.log("registering mapper: ", mapCtrl);
 			$scope.mapCtrl = mapCtrl;
 		};
-		this.submit = function (formCtrl) {
-			console.log("submit: ", this.address);
+		this.registerArchiver = function (archiveCtrl) {
+			console.log("registering archiver: ", archiveCtrl);
+			$scope.archiveCtrl = archiveCtrl;
 		};
+		// TODO: Need auto complete
+		this.submit = (formCtrl) => {
+			console.log("director.submit");
+			this.handleAddressChange(this.address, true);
+			// $scope.mapCtrl.mapAddress(this.address);
+			// $scope.archiveCtrl.saveAddress(this.address);
+		};
+		this.addressChanged = function (archive) {
+			this.handleAddressChange($scope.archiveCtrl.selectedAddress, false);
+		};
+		this.handleAddressChange = (address, archive) => {
+			console.log("director.handleAddressChange: ", archive, address);
+			$scope.mapCtrl.mapAddress(address);
+			if (archive) {
+				$scope.archiveCtrl.saveAddress(this.address);
+			}
+		}
 	}
 
-	link($scope) {
-		console.log("director init: ", $scope);
-		if (!$scope.mapCtrl) {
-			console.log("no mapCtrl at link time");
-		}
-		$scope.mapCtrl.log("this message");
-	}
+	// link($scope) {
+	// }
 
 }
 

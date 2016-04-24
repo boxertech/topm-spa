@@ -98,7 +98,12 @@ Create a simple app that takes an address input and displays google map.
 - installed angular-google-maps and google-maps-api to create the map feature.
 - using Google Maps API site, and posting from [Sten Hougaard] (http://codepen.io/netsi1964/post/angularjs-google-maps-directive), I displayed a map inside our mapper.
 - Also had to install lodash and angular-simple-logger to resolve dependencies with angular-google-maps.
-- This provides 
+- created geocoder service to convert address to geocode via Google API.
+- Changed layout from horizontal to vertical. 
+- **[REQ-2.1] complete**
+
+### 2. [REQ-2.2] Create another directive that stores address inputs into localstorage to be retrievable in a "history list" in the ui somewhere.
+
 
 
 ## [REQ-3] Third Mini App: TestMe
