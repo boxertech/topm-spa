@@ -39,7 +39,7 @@ class Archiver {
 			if (this.$window.localStorage) {
 				this.$window.localStorage.setItem("archiverAddresses", JSON.stringify(this.addresses));
 			}
-			// console.log("storage after save: ", this.getAddresses());
+			console.log("storage after save: ", this.getAddresses());
 			return;
 		};
 

@@ -103,7 +103,14 @@ Create a simple app that takes an address input and displays google map.
 - **[REQ-2.1] complete**
 
 ### 2. [REQ-2.2] Create another directive that stores address inputs into localstorage to be retrievable in a "history list" in the ui somewhere.
-
+- created an archiver directive that will pull addresses out of localStorage.
+- set Address History to only display if there are addresses in history.
+- When an address is search in the mapper, the address is added to the history.
+- When address history clicked, dropdown of Address Histories shown (rolling list of 20 addresses).
+- Clicking on an address in the history loads that history in mapper.
+- Further features to consider, do not add an address to the list if it is already on the list, if an address is selected from the list, move it to the front of the list as most recent, move storage to a service.
+- *There is a defect in the application that I have not yet been able to resolve.  When writing to local storage, and then reading the values back out from local storage, everything looks fine.  This is shown in the console with the "storage after save: " log entry.  However, viewing Chrome resources shows the data being written to localStorage.  And then immediately, all except the first entry are converted to nulls.  I thought this was a result of the array not being stringified correctly. However, deleting the localStorage key via the Chrome dev tools, restarting the application, and writing a different address to localStorage, results in the previous address entry with trailing nulls being written.*
+- **[REQ-2.2] Not completed**
 
 
 ## [REQ-3] Third Mini App: TestMe
