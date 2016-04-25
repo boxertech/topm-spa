@@ -3,6 +3,8 @@
 **/
 $color-label: #666;
 $frame-border: #ccc;
+$circle-stroke: rgba(0,0,0,0.54);
+$circle-fill: rgba(0,0,0,0.18);
 
 .simple-form {
 	margin: 20px;
@@ -55,8 +57,8 @@ fieldset {
 	}
 }
 circle {
-	stroke: blue;
+	stroke: $circle-stroke;
 	stroke-width: 3px;
-	fill: steelblue;
+	fill: $circle-fill;
 	opacity: .2;
 }

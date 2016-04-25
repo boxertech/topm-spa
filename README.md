@@ -79,6 +79,7 @@ Create a simple crud angular app with simulated splash loading delay.
 - **[REQ-1.6] complete**
 
 **[REQ-1] minimum requirements complete**
+*npm run-script loadme*
 
 ## [REQ-2] Second Mini App: DirectMe
 ==============================
@@ -110,7 +111,16 @@ Create a simple app that takes an address input and displays google map.
 - Clicking on an address in the history loads that history in mapper.
 - Further features to consider, do not add an address to the list if it is already on the list, if an address is selected from the list, move it to the front of the list as most recent, move storage to a service.
 - *There is a defect in the application that I have not yet been able to resolve.  When writing to local storage, and then reading the values back out from local storage, everything looks fine.  This is shown in the console with the "storage after save: " log entry.  However, viewing Chrome resources shows the data being written to localStorage.  And then immediately, all except the first entry are converted to nulls.  I thought this was a result of the array not being stringified correctly. However, deleting the localStorage key via the Chrome dev tools, restarting the application, and writing a different address to localStorage, results in the previous address entry with trailing nulls being written.*
-- **[REQ-2.2] Not completed**
+- Reviewed other libraries to understand how others manage local storage.  Much like I did.
+- opted for strategy that writes each address individually rather than as an array.
+- Added function to get all keys from local storage and filter those to address keys based on a key prefix.
+- Update the save function to save addresses as objects with key, addr, and a lastDate used.
+- Added sorting to addresses to assure most recently used is on top
+- Added address list truncating (after 20 addresses). Sorting is used to assure oldest addres gets dropped.
+- **[REQ-2.2] completed**
+
+**[REQ-2] minimum requirements complete**
+*npm run-script directme*
 
 
 ## [REQ-3] Third Mini App: TestMe
@@ -138,11 +148,8 @@ Reusing the "LoadMe" mini app, create e2e tests using protractor.
 - Create thanks.spec.js.  Create test validating transition from loaded state to thanks state. Create test validating display values.
 - **[REQ-3-2] completed**
 
-## TODO:
-- ES6ify
-- documentation
-- architecture notes
-- test bad input
-- test remaining fields
-- **local storage**
-- 
+**[REQ-3] minimum requirements complete**
+*npm run-script loadme* - in first terminal
+*webdriver-manager start* - in second terminal (requires protractor and selenium set-up)
+*npm run-script test-loadme* - in third terminal
+

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "loadme": "gulp serve-loadme",
+    "directme": "gulp serve-directme",
     "test-loadme": "protractor loadme/tests/conf.js"
   },
   "repository": {

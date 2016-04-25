@@ -1,3 +1,7 @@
+/**
+ * GEOCODESERVICE
+ * The GeoCodeService is a simple service to convert an address to a GeoCode object via the google.maps.Geocoder
+ */
 class GeoCodeService {
 	constructor($q) {
 		this.$q = $q;
@@ -12,8 +16,6 @@ class GeoCodeService {
 			//handle reply
 			deferred.resolve(results);
 			console.log("geocoder: ", results[0].geometry.location, status);
-			// newCenter.latitude = results[0].geometry.location.lat();
-			// newCenter.latitude = results[0].geometry.location.lng();
 		});
 
 		return deferred.promise;
@@ -21,4 +23,4 @@ class GeoCodeService {
 }
 
 angular.module("directMeApp")
-	.service("geoCodeService", GeoCodeService); // , ["geoCodeService", "$q", (geoCodeService, $q) => new GeoCodeService($q)]);
+	.service("geoCodeService", GeoCodeService);

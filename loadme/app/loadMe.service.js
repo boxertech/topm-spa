@@ -4,10 +4,10 @@ angular.module('loadMeApp')
 		this.saveContact = (contact) => {
 			if (!contact) return;
 
-			// TODO: need more data definition to properly validate data.
-			// TODO: need to assure data sanitized
+			// TODO: need more data definition to validate data.
+			// TODO: data sanitation not included
 			this.contact = contact;
-			console.log("loadMeService: ", this.contact);
+
 		}
 
 		this.getContact = () => {

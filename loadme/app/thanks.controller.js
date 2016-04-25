@@ -5,5 +5,4 @@ angular.module('loadMeApp')
 			vm.contact = loadMeService.getContact();
 			console.log("thanks: ", this);
 
-		// TODO: need to add form validation messages
 	}]);

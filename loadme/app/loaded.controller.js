@@ -8,5 +8,4 @@ angular.module('loadMeApp')
 			$state.go('thanks');
 		}
 
-		// TODO: need to add form validation messages
 	}]);
